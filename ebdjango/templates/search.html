@@ -1,0 +1,56 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<div id="sub_search">
+    <form method='GET' action={% url 'search' %}>
+        <input id="sub_search_input" type='text' name = 'q' placeholder='Search' value = '{{ request.GET.q}}' />
+        <input id="sub_submit_input" type="image" src={% static 'images/sample_search.png'%} alt="submit"/>
+    </form>
+</div>
+
+
+{% for sub_list in page_obj_divided %}
+    <div id="alum_profile_row">
+        {% for obj in sub_list %}
+                <div id="alum_profile">
+                    <a id="triger_popup" class="triger_popup" ><img id="alum_profile_image" src="{{ obj.photo.url}}" alt="main illustration"/></a>
+                    <div id="alum_profile_text">
+                        <p id="alum_name">{{ obj.first_name }} {{obj.last_name}}</p>
+                        <p id="alum_college">{{ obj.college }}</p>
+                        <p id="alum_employer">{{ obj.current_employer.name }}</p>
+                    </div> 
+                </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+<div id="popupbackground">
+    <span id="popuphelper"></span>
+    <div id="popup">
+        <div id="popupclosebutton"><p>&times;</p></div>
+        <p>Add any HTML content<br />inside the popup box!</p>
+    </div>
+</div>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+<script src="{% static 'js/popup.js' %}"></script>
+
+{% endblock %}

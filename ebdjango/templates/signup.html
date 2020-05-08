@@ -1,0 +1,72 @@
+{% extends "base_generic.html" %}
+
+{% block intro %}
+  <h1 id='login-title'> Register Alumni Database </h1>
+
+  <form id="signup_form" method="post" action="{% url 'signup' %}" novalidate>
+    {% csrf_token %}
+    <div id="signup_container1">
+      <div id="signup_content1">
+        <div id='signup_label'>
+          {{ form.firstname.label_tag }}
+        </div>
+        <div id='signup_input'>
+          {{ form.firstname }}
+        </div>
+        <div id='signup_error'>
+          {% for errors in form.firstname.errors %}
+            <p>{{ errors }}</p>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div id="signup_content1">
+        <div id='signup_label'>
+          {{ form.lastname.label_tag }}
+        </div>
+        <div id='signup_input'>
+          {{ form.lastname }}
+        </div>
+        <div id='signup_error'>
+          {% if form.lastname.errors %}
+            <p>Last name is required.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div id="signup_container2">
+    {% for field in form %}
+      {% if field.name != "firstname" and field.name != "lastname" %}
+      <div id="signup_content2">
+        <div id='signup_label'>
+          {{ field.label_tag}}
+        </div>
+        <div id='signup_input'>
+          {{ field }}
+        </div>
+        <div id='signup_error'>
+          {% for errors in field.errors %}
+            <p>{{ errors }}</p>
+          {% endfor %}
+        </div>
+          {% if form.errors %}
+            <p id='password_help'>{{ field.help_text}}</p>
+          {% endif %}
+      </div>
+      {% endif %}
+    {% endfor %}
+      <div id='signup_content2'>
+        <div if="signup_label">
+          {{ profile_form.joined_year.label_tag }}
+        </div>
+        <div id='signup_input'>
+          {{ profile_form.joined_year }}
+        </div>
+      </div>
+    </div>
+    <button type="submit">Register</button>
+    <p id='help_text'> Already have an account? <a href={% url 'login' %}>Log in</a> </p>
+  </form>
+
+{% endblock %}

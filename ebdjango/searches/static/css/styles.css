@@ -1,0 +1,589 @@
+html {
+  font-family: "Helvetica Neue", "Helvetica Neue";
+  height: 100vh;
+}
+
+body {
+  height: 95vh;
+  margin: 0;
+}
+
+#intro_body {
+  background: linear-gradient(to left, white 67%, #ffdc7d 67%);
+}
+
+/* Navigation Bar CSS */
+#navbar2 {
+  height: 8%;
+  margin: 2% 2% 1% 2%;
+}
+
+#navbar1 {
+  height: 8%;
+  margin: 2% 12.5% 1% 12.5%;
+}
+
+#navbar1 ul {
+  margin: 0;
+  padding: 1% 2% 1% 0%;
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar1 ul li {
+  display: inline-block;
+  color: black;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.6px;
+}
+
+#navbar2 ul {
+  margin: 0;
+  padding: 1% 2% 1% 0%;
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar2 ul li {
+  display: inline-block;
+  color: black;
+}
+
+#navbar-part1 {
+  width: 40%;
+}
+
+#navbar-part1 li {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#navbar-part1 a {
+  text-decoration: none;
+  color: black;
+}
+
+#navbar-part2 {
+  width: 60%;
+  text-align: right;
+}
+
+#navbar-part2 li {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#navbar-part2 a {
+  text-decoration: none;
+  color: black;
+}
+
+#logo {
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.6px;
+}
+
+/* Intro: Login Page CSS */
+/* Static Part */
+#content_container {
+  display: block;
+}
+
+#intro_format {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+}
+
+#intro_static {
+  width: 33%;
+  text-align: center;
+  margin: auto 0 auto 0;
+}
+
+#intro_static img {
+  margin-top: 15%;
+  width: 85%;
+}
+
+#intro_static h1 {
+  margin: 0 auto 5% auto;
+  width: 70%;
+  text-align: left;
+  font-size: 35px;
+  color: #bd8600;
+}
+
+#intro_static h2 {
+  margin: 0 auto 0% auto;
+  width: 70%;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: left;
+  color: #bd8600;
+}
+
+#intro_static h3 {
+  margin: 0 auto 0% auto;
+  width: 70%;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: left;
+  color: #bd8600;
+}
+
+/* Dynamic Part */
+#intro_dynamic {
+  font-family: HelveticaNeue;
+  width: 30%;
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#intro_dynamic button {
+  height: 46px;
+  border-radius: 30px;
+  border: none;
+  width: 35%;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #f5b506;
+}
+
+#login-title {
+  font-size: 20px;
+  margin-bottom: 13%;
+}
+
+#login_label {
+  font-size: 18px;
+  margin-bottom: 3%;
+}
+
+#login_input {
+  outline: none;
+  margin-bottom: 11%;
+  width: 100%;
+  background-color: #efefef;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+#login_input input {
+  background-color: #efefef;
+  width: 100%;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+#password_label {
+  margin-bottom: 3%;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#password_input {
+  outline: none;
+  width: 100%;
+  background-color: #efefef;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+#password_input input {
+  background-color: #efefef;
+  width: 100%;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+#forgot_pw_text {
+  font-weight: 400;
+  font-size: 16px;
+  margin: auto 0 auto 0;
+}
+
+#forgot_pw_text a {
+  text-decoration: none;
+  color: #bd8600;
+}
+
+#intro_dynamic form input {
+  height: 46px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+#login_button {
+  margin: 11% 0 0 0;
+  width: 45%;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #f5b506;
+}
+
+#form_validation p {
+  margin-top: 1%;
+  color: #ce0031;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#register_text {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 1% 0 10% 0;
+}
+
+#register_text a {
+  text-decoration: none;
+  color: #bd8600;
+  font-weight: 700;
+}
+
+/* Intro: Signup Page CSS */
+#signup_form input {
+  background-color: #efefef;
+  border: none;
+  outline: none;
+}
+
+#signup_container1 {
+  display: flex;
+  flex-direction: row;
+}
+
+#signup_container1 input {
+  width: 90%;
+}
+
+#signup_content1 {
+  width: 50%;
+  margin-bottom: 3%;
+}
+
+#signup_container2 {
+  display: block;
+}
+
+#signup_container2 input {
+  width: 95%;
+}
+
+#signup_content2 {
+  margin-bottom: 3%;
+}
+
+#signup_help p {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 3% 0;
+}
+
+#signup_error p {
+  color: #ce0031;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 3% 0;
+}
+
+#password_help {
+  color: #ce0031;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+#help_text {
+  color: black;
+  font-weight: 400;
+}
+
+#error_message {
+  color: #ce0031;
+  font-weight: 400;
+}
+
+#id_username {
+  margin-bottom: 0;
+}
+
+#signup_form input {
+  margin: 3% 0 0 0;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+#signup_input select {
+  background-color: #efefef;
+  border-radius: 30px;
+  width: 45%;
+  height: 46px;
+  margin: 3% 0 0% 0;
+  font-size: 14px;
+  background: url("/static/images/select_arrow.png") no-repeat right;
+  background-size: auto 30px;
+  background-position-x: 93%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-left: 5%;
+  outline: none;
+}
+
+#help_text {
+  color: black;
+  font-size: 16px;
+}
+
+#help_text a {
+  color: #bd8600;
+  text-decoration: none;
+}
+
+/* Intro: Password Reset */
+#pw_back_arrow {
+  height: 24px;
+  width: 24px;
+  margin-bottom: 8%;
+}
+
+#pw_label1 {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+#pw_label2 {
+  margin-top: 12%;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#pw_instruction {
+  color: #6b6b6b;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+#email input {
+  width: 100%;
+  background-color: #efefef;
+  padding: 0 0 0 10px;
+  font-size: 16px;
+}
+
+#email_submit {
+  width: 30%;
+  background-color: #f5b506;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 13%;
+}
+
+#success {
+  color: #00ce6b;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#email_success {
+  display: flex;
+}
+
+#email_check_icon {
+  width: 24px;
+  height: 24px;
+  margin: auto 3% auto 0;
+}
+
+#pw_input1 {
+  margin-top: 10%;
+}
+
+#pw_input1 input {
+  width: 80%;
+  background-color: #efefef;
+  margin-bottom: 8%;
+  margin-top: 5%;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+#pw_input2 input {
+  width: 80%;
+  background-color: #efefef;
+  margin-top: 3%;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+/* Main: Homepage*/
+#main {
+  margin: 3% auto 0 auto;
+  width: 85%;
+  background-color: #ffdc7d;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+#main_search {
+  width: 60%;
+  margin-left: 10%;
+}
+
+#instruction {
+  margin: 5% auto 0 auto;
+  width: 65%;
+}
+
+#main p {
+  padding-top: 5%;
+  font-weight: 200px;
+  text-align: left;
+}
+
+#main_intro_text {
+  width: 50%;
+  color: #bd8600;
+  font-weight: 500;
+  font-size: 35px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.05px;
+}
+
+#main form {
+  padding-bottom: 5%;
+}
+
+/* search */
+#search_input {
+  border: none;
+  outline: none;
+  width: 50%;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 30px;
+  padding-left: 6%;
+  background-color: #ffffff;
+}
+
+#submit_input {
+  width: 15px;
+  padding: 20px 0 0 0;
+  position: absolute;
+  left: 17%;
+}
+
+#main button {
+  margin-left: 1%;
+  border-radius: 10%;
+  border: none;
+  background-color: black;
+  color: white;
+  height: 46px;
+  width: 7%;
+  font-size: 18px;
+}
+
+#main img {
+  position: absolute;
+  margin: 3% 0 0 40%;
+  width: 40%;
+}
+
+#instruction-label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#alum_profile_row {
+  margin: 0 10% 4% 12%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+#alum_profile {
+  width: 20%;
+  margin: 0 5% 0 0;
+  border-radius: 30px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  justify-content: center;
+  text-align: center;
+}
+
+#alum_profile_text {
+  flex-direction: column;
+  padding: 0 5% 0 5%;
+  text-align: left;
+  height: 20%;
+}
+
+#alum_profile_image {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 100%;
+}
+
+#alum_name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1%;
+}
+
+#alum_college {
+  font-size: 16px;
+  color: #7f7f7f;
+  margin: 0 0 10% 0;
+}
+
+#alum_employer {
+  font-size: 16px;
+  color: #494949;
+}
+
+#sub_search_input {
+  margin: 2% 12% 4% 12%;
+  border: none;
+  outline: none;
+  width: 10%;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 30px;
+  padding-left: 4%;
+  background-color: #efefef;
+}
+
+#sub_submit_input {
+  width: 15px;
+  padding: 3% 0 0 0;
+  position: absolute;
+  outline: none;
+  left: 14%;
+}
+
+/* Popup box */

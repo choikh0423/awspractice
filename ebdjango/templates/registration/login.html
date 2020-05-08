@@ -1,0 +1,41 @@
+{% extends "base_generic.html" %}
+
+{% block intro %}
+  <h1 id='login-title'> Log in Alumni Database </h1>
+
+  <form method="post" action="{% url 'login' %}" novalidate>
+    {% csrf_token %}
+      <div id='login_label'>
+        <p> Email Address </p>
+      </div>
+      <div id='login_input'>
+        {{ form.username }}
+      </div>
+      <div id='password_label'>
+        {{ form.password.label_tag }}
+        <p id='forgot_pw_text'><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+      </div>
+      <div id='password_input'>
+        {{ form.password }}
+      </div>
+        <div id='form_validation'>
+          {% if form.errors %}
+            <p>Your email and password didn't match. Please try again.</p>
+          {% else %}
+            {% if next %}
+              {% if user.is_authenticated %}
+                <p>Your account doesn't have access to this page. To proceed,
+                please login with an account that has access.</p>
+              {% else %}
+                <p>Please login to see this page.</p>
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        </div> 
+    <input id="login_button" type="submit" value="Log in" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+
+  <p id='register_text'>Don't have an account? <a href="{% url 'signup' %}">Register</a></p>
+
+{% endblock %}

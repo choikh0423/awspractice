@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% block title %}<title>Welcome to Alumni Database</title>{% endblock %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+  {% if user.is_authenticated %}
+    <body id='main_body'>
+      <div id='navbar1'>
+        {% block sidebar1 %}
+        <ul>
+          <div id='navbar-part1'>
+            <li id='logo'><a href="{% url 'home' %}">ALUMNI DATABASE</a></li>
+          </div>
+          <div id='navbar-part2'>
+            <li><a href="{% url 'directory' %}">Directory</a></li>
+            <li>{{ user.first_name }} {{ user.last_name }} </li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+          </div>
+        </ul>
+        {% endblock %}
+      </div>
+      <div id="content">{% block content %}{% endblock %}</div>
+    </body>
+  {% else %}
+    <body id='intro_body'>
+      <div id='navbar2'>
+          {% block sidebar2 %}
+          <ul>
+            <div id='navbar-part1'>
+              <li id='logo'><a href="{% url 'home' %}">ALUMNI DATABASE</a></li>
+            </div>
+          </ul>
+        {% endblock %}
+      </div>
+      <div id='intro_format'>
+        <div id='intro_static'>
+          <h2>Welcome to</h2>
+          <h1>Alumni Database</h1>
+          <h3>Discover your alumni.</h3>
+          <img src={% static 'images/login_illustration.png'%} alt="Login Illustration">
+        </div>
+        <div id="intro_dynamic">{% block intro %}{% endblock %}</div>
+      </div>
+    </body>
+  {% endif %}
+</html>
