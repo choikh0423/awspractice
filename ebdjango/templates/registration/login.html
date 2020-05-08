@@ -7,6 +7,7 @@
     {% csrf_token %}
       <div id='login_label'>
         <p> Email Address </p>
+        <h1>Hello!!!!!!!!!</h1>
       </div>
       <div id='login_input'>
         {{ form.username }}
@@ -14,6 +15,7 @@
       <div id='password_label'>
         {{ form.password.label_tag }}
         <p id='forgot_pw_text'><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+        <h1>Hi!!!!!!!!!</h1>
       </div>
       <div id='password_input'>
         {{ form.password }}
